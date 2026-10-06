@@ -1,0 +1,10 @@
+{
+  "description": "Enables users to create and customize logos by following guided instructions, streamlining brand identity design for businesses and creatives.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

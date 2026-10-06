@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+@import 'tailwindcss';
+
+@theme inline {
+  --color-black-deep: #010101;
+  --color-black-soft: #171313;
+  --color-charcoal: #3A3028;
+  --color-bronze: #85521C;
+  --color-gold-rich: #B37427;
+  --color-gold-champagne: #DD9C3E;
+  --color-gold-bright: #F1C56A;
+  --color-silver: #A9A8A6;
+  --color-platinum: #E9E8E6;
+}
+
+:root {
+  --background: #010101;
+  --foreground: #E9E8E6;
+  --gold: #DD9C3E;
+  --gold-bright: #F1C56A;
+  --gold-muted: #B37427;
+  --surface: #171313;
+  --surface-2: #3A3028;
+  --text-muted: #A9A8A6;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #3A3028 #010101;
+}
+
+body {
+  background-color: #010101;
+  color: #E9E8E6;
+  font-family: var(--font-body);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #010101;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3A3028;
+  border-radius: 2px;
+}
+
+::selection {
+  background: #DD9C3E33;
+  color: #F1C56A;
+}
+
+
+/* =========================================================
+   MOBILE RESPONSIVE LAYOUT
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+
+  /* =========================
+     NAVIGATION
+     ========================= */
+
+  nav {
+    height: 56px !important;
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
+
+
+  /* =========================
+     HERO
+     ========================= */
+
+  #hero {
+    min-height: 75svh !important;
+    height: 75svh !important;
+  }
+
+
+  /* =========================
+     ABOUT
+     ========================= */
+
+  #about {
+    padding: 2.5rem 0.75rem !important;
+  }
+
+  #about > div {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+
+  /* =========================
+     SERVICES
+     ========================= */
+
+  #services {
+    padding: 2.5rem 0.75rem !important;
+  }
+
+
+  /* =========================
+     PROJECTS
+     ========================= */
+
+  #projects {
+    padding: 2.5rem 0.75rem !important;
+  }
+
+  /*
+    Compact 2-column mobile portfolio.
+
+    IMPORTANT:
+    There is NO aspect-ratio here.
+    The old aspect-ratio rule was making
+    the cards unnecessarily tall.
+  */
+
+  .projects-grid {
+    width: 100% !important;
+    grid-template-columns: 1fr 1fr !important;
+    grid-auto-rows: 58px !important;
+    gap: 4px !important;
+  }
+
+
+  /* P1 */
+  .projects-grid > div:nth-child(1) {
+    grid-column: 1 / 2 !important;
+    grid-row: 1 / 5 !important;
+    min-height: 0 !important;
+  }
+
+
+  /* P2 */
+  .projects-grid > div:nth-child(2) {
+    grid-column: 2 / 3 !important;
+    grid-row: 1 / 3 !important;
+    min-height: 0 !important;
+  }
+
+
+  /* P3 */
+  .projects-grid > div:nth-child(3) {
+    grid-column: 2 / 3 !important;
+    grid-row: 3 / 5 !important;
+    min-height: 0 !important;
+  }
+
+
+  /* P5 */
+  .projects-grid > div:nth-child(4) {
+    grid-column: 1 / 3 !important;
+    grid-row: 5 / 8 !important;
+    min-height: 0 !important;
+  }
+
+
+  /* P4 */
+  .projects-grid > div:nth-child(5) {
+    grid-column: 1 / 3 !important;
+    grid-row: 8 / 11 !important;
+    min-height: 0 !important;
+  }
+
+
+  /* P6 */
+  .projects-grid > div:nth-child(6) {
+    grid-column: 1 / 2 !important;
+    grid-row: 11 / 15 !important;
+    min-height: 0 !important;
+  }
+
+
+  /* P7 */
+  .projects-grid > div:nth-child(7) {
+    grid-column: 2 / 3 !important;
+    grid-row: 11 / 15 !important;
+    min-height: 0 !important;
+  }
+
+
+  /* =========================
+     CONTACT
+     ========================= */
+
+  #contact {
+    padding: 2.5rem 0.75rem !important;
+  }
+
+
+  /* =========================
+     FOOTER
+     ========================= */
+
+  footer {
+    padding: 2.5rem 0.75rem 1.5rem !important;
+  }
+
+}
